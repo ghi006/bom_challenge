@@ -72,7 +72,7 @@ group_by(Station_number,lon) %>%
 summarise(average = mean(Solar_exposure, na.rm = TRUE)) %>%
 ungroup() %>% 
 filter(lon==min(lon)|lon==max(lon))
- 
+
 
 
 
