@@ -46,7 +46,7 @@ Tidy_bom_station <- Bom_stations %>%
   group_by(state) %>% 
   write_csv("data/Tidy_bom_station.csv")
 
-Bom_stations %>% 
+Station_df <- Bom_stations %>% 
   gather(key = Station_number, value = amount,-info) %>% 
   spread(key = info, value = amount) %>%
   mutate(Station_no=as.numeric(Station_number))
